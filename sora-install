@@ -66,12 +66,19 @@ then
 fi
 
 # Install Sway config file
-sudo curl -o /etc/sway/config https://github.com/enoki-inc/sora/sway/config
+sudo curl -o /etc/sway https://github.com/enoki-inc/sora/sway
 sudo chmod 644 /etc/sway/config
 
 # Install Waybar config file
-sudo curl -o /etc/waybar/config https://github.com/enoki-inc/sora/waybar/config
+sudo curl -o /etc/waybar https://github.com/enoki-inc/sora/waybar
 sudo chmod 644 /etc/waybar/config
+
+# Install Wayvnc config file
+sudo curl -o /etc/waybar https://github.com/enoki-inc/sora/waybar
+sudo chmod 644 /etc/wayvnc/config
+
+# Install Alacritty config file
+sudo curl -o /etc/alacritty https://github.com/enoki-inc/sora/alacritty
 
 # Install sora-share and sora-stop scripts
 sudo curl -o /usr/local/bin/sora-share https://github.com/enoki-inc/sora/sora-share
