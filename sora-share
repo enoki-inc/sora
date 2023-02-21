@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Start sway window manager with config file
+sway -c /etc/sway/config

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Send sway exit command using swaymsg
+swaymsg exit

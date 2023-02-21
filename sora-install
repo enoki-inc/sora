@@ -1,0 +1,83 @@
+#!/bin/bash
+
+# Check if sway is installed
+if ! command -v sway &> /dev/null
+then
+    echo "sway is not installed. Installing..."
+    sudo apt-get install sway -y
+fi
+
+# Check if wayvnc is installed
+if ! command -v wayvnc &> /dev/null
+then
+    echo "wayvnc is not installed. Installing..."
+    sudo apt-get install wayvnc -y
+fi
+
+# Check if novnc is installed
+if ! command -v novnc &> /dev/null
+then
+    echo "novnc is not installed. Installing..."
+    sudo apt-get install novnc -y
+fi
+
+# Check if ngrok is installed
+if ! command -v ngrok &> /dev/null
+then
+    echo "ngrok is not installed. Installing..."
+    sudo apt-get install ngrok -y
+fi
+
+# Check if Nautilus is installed
+if ! command -v nautilus &> /dev/null
+then
+    echo "Nautilus is not installed. Installing..."
+    sudo apt-get install nautilus -y
+fi
+
+# Check if VSCode is installed
+if ! command -v code &> /dev/null
+then
+    echo "VSCode is not installed. Installing..."
+    sudo apt-get install code -y
+fi
+
+# Check if Firefox is installed
+if ! command -v firefox &> /dev/null
+then
+    echo "Firefox is not installed. Installing..."
+    sudo apt-get install firefox -y
+fi
+
+# Check if Bibata mouse cursors are installed
+if ! dpkg -s bibata-cursors &> /dev/null
+then
+    echo "Bibata mouse cursors are not installed. Installing..."
+    sudo add-apt-repository ppa:dyatlov-igor/bibata-cursor -y
+    sudo apt-get update
+    sudo apt-get install bibata-cursors -y
+fi
+
+# Check if JetBrains Mono font is installed
+if ! fc-list | grep -i "JetBrains Mono" &> /dev/null
+then
+    echo "JetBrains Mono font is not installed. Installing..."
+    sudo apt-get install fonts-jetbrains-mono -y
+fi
+
+# Install Sway config file
+sudo curl -o /etc/sway/config https://github.com/enoki-inc/sora/sway/config
+sudo chmod 644 /etc/sway/config
+
+# Install Waybar config file
+sudo curl -o /etc/waybar/config https://github.com/enoki-inc/sora/waybar/config
+sudo chmod 644 /etc/waybar/config
+
+# Install sora-share and sora-stop scripts
+sudo curl -o /usr/local/bin/sora-share https://github.com/enoki-inc/sora/sora-share
+sudo curl -o /usr/local/bin/sora-stop https://github.com/enoki-inc/sora/sora-stop
+sudo chmod +x /usr/local/bin/sora-share
+sudo chmod +x /usr/local/bin/sora-stop
+
+# Print success message
+echo "sora install completed successfully."
