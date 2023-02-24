@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install common software properties
+sudo apt-get install software-properties-common -y
+
 # Check if sway is installed
 if ! command -v sway &> /dev/null
 then
