@@ -21,7 +21,10 @@ fi
 if ! command -v novnc &> /dev/null
 then
     echo "novnc is not installed. Installing..."
-    sudo apt-get install novnc -y
+    sudo mkdir -p /etc/noVNC && \
+    sudo git clone https://github.com/enoki-inc/enoVNC.git && \
+    sudo mv /enoVNC/* /etc/noVNC && \
+    sudo git clone https://github.com/novnc/websockify.git /etc/noVNC/utils/websockify
 fi
 
 # Check if ngrok is installed
