@@ -39,7 +39,9 @@ fi
 if ! command -v code &> /dev/null
 then
     echo "VSCode is not installed. Installing..."
-    sudo apt-get install code -y
+    sudo curl -L https://go.microsoft.com/fwlink/?LinkID=760868 -o vscode.deb && \
+    sudo dpkg -i vscode.deb
+    sudo rm -rf vscode.deb
 fi
 
 # Check if Firefox is installed
