@@ -1,0 +1,6 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://github.com/enoki-inc/sora
+
+Files: *
+Copyright: © 2023 Enoki inc. <enoki@enoki.so>
+License: GPL-3

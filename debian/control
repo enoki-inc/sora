@@ -1,0 +1,28 @@
+Source: sora
+Section: graphics
+Priority: optional
+Maintainer: Enoki <enoki@enoki.so>
+Uploaders:
+ Enoki <enoki@enoki.so>
+Build-Depends:
+ debhelper-compat (= 12),
+ make
+Standards-Version: 4.6.0.1
+Rules-Requires-Root: no
+Homepage: https://enoki.so
+Vcs-Git: https://github.com/enoki-inc/sora.git
+Vcs-Browser: https://github.com/enoki-inc/sora
+
+Package: sora
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ sway,
+ wayvnc,
+ waybar
+Provides:
+Recommends:
+Description: Multi-player remote desktop environment
+ A set of scripts and configuration files and dependencies that constitute the
+ Sora multi-player remote desktop environment.

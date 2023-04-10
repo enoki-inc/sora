@@ -1,0 +1,5 @@
+sora (0.0.1) unstable; urgency=low
+
+  * Create debian package for Sora
+
+ -- Andri Yngvason <andri@yngvason.is>  Mon, 10 Apr 2023 19:00:00 +0000
